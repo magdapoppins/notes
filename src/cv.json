@@ -1,0 +1,24 @@
+{
+    "cv": {
+        "work": [
+            "2017-2018 Junior C# Consultant @ Academic Work in Malmö",
+            "2018-2019 Full Stack Consultant @ WunderDog in Helsinki",
+            "2019 --> Software Engineer @ Valohai in Turku / remote"
+        ],
+        "education": [
+            "2012-2014 Artisan of Textile (Omnia)",
+            "2014-2019 BA, MA Educational Science (University of Turku)",
+            "2017 C# Bootcamp (Acedemy by Academic Work)"
+        ],
+        "hobbies": "During my free time I like to be outside and work on my garden. Relaxing is super important to me (I feel it really feeds creativity) so I also practice yoga and meditation.",
+        "tech": [
+            "Python 3   ♥ ♥ ♥ ♥ ♥",
+            "TypeScript ♥ ♥ ♥ ♥",
+            "React      ♥ ♥ ♥",
+            "CSS/UI     ♥",
+            "AWS        ♥ ♥ ♥ ♥",
+            "Docker     ♥ ♥ ♥",
+            "Postgres   ♥ ♥ ♥"
+        ]
+    }
+}
