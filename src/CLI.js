@@ -10,8 +10,12 @@ const CLI = () => {
   const [log, setLog] = React.useState([bakeToLogMessage("Type 'help' to get started.", 'info')])
 
   const getResponse = (e) => {
-    if (e.key !== 'Enter') {
+    if (e.key !== 'Enter' && e.key !== 'Tab') {
       return false;
+    }
+    if (e.key === 'Tab') {
+      e.preventDefault()
+      // Todo add autocompletion
     }
     const input = e.target.value
     if (input === 'help') {

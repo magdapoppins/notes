@@ -39,7 +39,7 @@ const Prompt = ({getResponse, prompt, setPrompt}) => {
             type='text'
             value={value}
             onChange={e => setValue(e.target.value)}
-            onKeyPress={keyPressHandle}
+            onKeyDown={keyPressHandle}
             style={{position: 'fixed', left: '-999px', top: '-999px'}}
         />
         {value}

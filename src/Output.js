@@ -16,6 +16,7 @@ export const OutputLump = styled.pre`
 `
 
 // Items come in shape {content: 'hello', role: 'info/text/warning'}
+// TODO key is not unique if two of same D:
 export const Output = ({items}) => <>
     {items.map(i => {
         if (i.role === 'info') {
