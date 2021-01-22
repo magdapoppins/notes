@@ -1,6 +1,19 @@
 import React from "react"
 import { useEvent } from "react-use"
-import { colors } from "./utils/colors"
+import styled, { keyframes } from "styled-components"
+
+
+function blinkingEffect() {
+    return keyframes`
+        50% {
+            opacity: 0;
+        }
+    `;
+}
+
+const Blinking = styled.span`
+    animation: ${blinkingEffect} 1s ease infinite;
+`
 
 const Prompt = ({getResponse, prompt, setPrompt}) => {
     const [value, setValue] = React.useState('')
@@ -30,7 +43,7 @@ const Prompt = ({getResponse, prompt, setPrompt}) => {
             style={{position: 'fixed', left: '-999px', top: '-999px'}}
         />
         {value}
-        <span className='blink' style={{backgroundColor: colors.blue}}>&#x2588;</span>
+        <Blinking>&#x2588;</Blinking>
     </div>
 }
 
