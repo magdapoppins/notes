@@ -11,8 +11,7 @@ import {
 const App = () => {
   return(
   <Router>
-    <div style={{margin: '.2em 25em 2em 25em'}}>
-    {/* TODO add scroll! */}
+    <div style={{margin: '.2em 25em 5em 25em'}}>
       <nav style={{display: 'flex', justifyContent: 'space-between'}}>
         <Link to="/">Home</Link>
         <Link to="/notes">Notes</Link>

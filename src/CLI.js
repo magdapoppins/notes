@@ -8,6 +8,19 @@ const bakeToLogMessage = (content, role) => ({content: content, role: role});
 
 const CLI = () => {
   const [log, setLog] = React.useState([bakeToLogMessage("Type 'help' to get started.", 'info')])
+  const endOfContents = React.useRef();
+
+  const scrollToBottom = () => {
+    console.log("Hiya scrollll")
+    endOfContents.current.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+      });
+  };
+
+  React.useEffect(() => {
+    scrollToBottom()
+}, [log])
 
   const getResponse = (e) => {
     if (e.key !== 'Enter' && e.key !== 'Tab') {
@@ -92,6 +105,7 @@ const CLI = () => {
     <ASCII />
     <Output items={log}/>
     <Prompt getResponse={getResponse}/>
+    <div ref={endOfContents}></div>
   </>
 }
 
