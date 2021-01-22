@@ -1,0 +1,42 @@
+# On web accessibility
+
+Web accessibility (a11y for short) is one of the increasingly important topics of web development. You can easily get started with inspecting and amending your page using tools like [Wave](https://wave.webaim.org/).
+
+## Motivation
+- Providing equal access
+- Best practices in a11y overlap with search engine optimization and usability
+
+## How does your page look without it's looks?
+The page DOM is an "accessibility tree", where elements have different attributes based on what they are. This tree structure is the basis of assistive technologies such as screen readers. These technologies, having read though this tree, provide an alternative way to interact with it that meets the users needs. Each object in the accessibility tree contains the following attributes.
+
+**name** - how we refer to a thing, for example a text inside a link  
+**description** - any description beyond the name, perhaps further description of the contents  
+**role** - what element it is, for example a button or a list  
+**state** - for example if a checkbox is checked or not  
+
+In addition to these, the element also contains information of possible actions that can be performed with it.
+
+## Semantic HTML
+- Understanding HTML and using the elements it provides purposefully sets an excellent starting point to an accessible project
+- Semantic HTML elements are those elements with attached meaning (in contrast to for example `<div>` or `<span>`)
+- Correct semantics allows technologies such as screen readers to better notice and utilise the elements in their intended way
+
+### Some examples
+- header - container of headings, icons...
+- footer - things like copyright, authorship...
+- nav - a set of navigation links
+- button - something happens when you press it
+- a - a link leading somewhere
+- labels with inputs inside - to indicate what this input is
+- section - a section
+- article - self-contained content
+- figure and nested figcaption - a figure along with a text description
+- h1-h6 - headings in importance order from 1 through 6
+
+## ARIA (Accessible Rich Internet Applications)
+- ARIA is a set of attributes aiming to provide more possiblilites for defining the role and usage of elements
+- Roles, properties and states describing the UI
+
+### Some examples
+- aria-hidden - indicates that the element is hidden from the visual UI
+- role - the semantic role of the element which otherwise offers no semantics. Danger of using this for wrongly changing a role of an element!

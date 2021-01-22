@@ -15,7 +15,7 @@ const Blinking = styled.span`
     animation: ${blinkingEffect} 1s ease infinite;
 `
 
-const Prompt = ({getResponse, prompt, setPrompt}) => {
+const Prompt = ({getResponse, location}) => {
     const [value, setValue] = React.useState('')
     const inputRef = React.useRef()
     const focusInput = React.useCallback(() => {
@@ -33,8 +33,8 @@ const Prompt = ({getResponse, prompt, setPrompt}) => {
         }
     }, [focusInput, getResponse])
 
-    return <div>
-        guest@magda <input
+    return <>
+        <pre style={{'display': 'inline-block', 'margin': 0, lineHeight: '1.2em'}}>/home/guest/{location} 🛼 </pre><input
             ref={inputRef}
             type='text'
             value={value}
@@ -44,7 +44,7 @@ const Prompt = ({getResponse, prompt, setPrompt}) => {
         />
         {value}
         <Blinking>&#x2588;</Blinking>
-    </div>
+    </>
 }
 
 export default Prompt;
