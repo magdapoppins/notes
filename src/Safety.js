@@ -1,7 +1,12 @@
 import React from "react"
+import { GlowASCII } from "./ASCII";
+import { OutputLump } from "./Output";
 
 
 const keyboard = `
+THIS IS
+            THE BORING
+                            SIDE...
 __________________________________________________
 |          _____________________________           |
 | [1] [2]  _____________________________ [_][_][_] |
@@ -12,30 +17,32 @@ __________________________________________________
 | [11][12] [___][][][][][][][][][][][__] [__][0][] |
 |          [_][______________][_]                  |
 |__________________________________________________|
+
 `
 
-const content = `
-Hi there 👋🏼 I'm Magda. I work as a software engineer at Valohai.
+const hello = `Hi there 👋🏼 I'm Magda. I work as a software engineer at Valohai.`
 
+const cv = `
 Work:
 -----
 2017-2018 Junior C# Consultant @ Academic Work in Malmö
 2018-2019 Full Stack Consultant @ WunderDog in Helsinki
 2019 --> Software Engineer @ Valohai in Turku / remote
 
-
 Education:
 ----------
 2012-2014 Artisan of Textile (Omnia)
 2014-2019 BA, MA Educational Science (University of Turku)
 2017 C# Bootcamp (Acedemy by Academic Work)
+`
 
-
+const hobbies = `
 During my free time I like to be outside and work on my garden. Relaxing
 is super important to me (I feel it really feeds creativity) so I also
 practice yoga and meditation.
+`
 
-
+const tech = `
 Tech Spec 0-5:
 ----------
 Python 3   ♥ ♥ ♥ ♥ ♥
@@ -45,16 +52,17 @@ AWS        ♥ ♥ ♥ ♥
 Docker     ♥ ♥ ♥
 K8s        ♥ ♥
 Postgres   ♥ ♥ ♥
+
 `
 
 const Safety = () => (
-  <div style={{padding: '0 4em'}}>
-    <h1>Welcome to the boring side of Magdas cv...</h1>
-    <pre>
-      {keyboard}
-      {content}
-    </pre>
-  </div>
+  <>
+    <GlowASCII>{keyboard}</GlowASCII>
+    <OutputLump warning>{hello}</OutputLump>
+    <OutputLump info>{cv}</OutputLump>
+    <OutputLump surprise>{hobbies}</OutputLump>
+    <OutputLump>{tech}</OutputLump>
+  </>
 )
 
 export default Safety;
