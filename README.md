@@ -5,7 +5,7 @@ Just my personal jumble of notes in a cute command line form. Check [it](http://
 - `yarn start` to start
 - `yarn deploy` to deploy to gh-pages
 
-## Thanks to
+## Tools used
 - [react-router]()
 - [emotion]()
 - [react-markdown]()
