@@ -3,7 +3,10 @@ import { colors } from "./utils/colors"
 
 
 export const OutputLump = styled.pre`
-    color: ${colors.blue};
+    margin: 0;
+    line-height: 1.2em;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
     ${props => props.info && css`
         color: ${colors.darkPink};
     `}
@@ -11,22 +14,21 @@ export const OutputLump = styled.pre`
         color: ${colors.red};
     `}
     ${props => props.surprise && css`
-    color: ${colors.yellow};
-`}
+        color: ${colors.yellow};
+    `}
 `
 
 // Items come in shape {content: 'hello', role: 'info/text/warning'}
-// TODO key is not unique if two of same D:
 export const Output = ({items}) => <>
-    {items.map(i => {
-        if (i.role === 'info') {
-            return  <OutputLump info key={i.content}>{i.content}</OutputLump>
+    {items.map((d, i) => {
+        if (d.role === 'info') {
+            return  <OutputLump info key={i}>{d.content}</OutputLump>
         }
-        else if (i.role === 'warning') {
-            return  <OutputLump warning key={i.content}>{i.content}</OutputLump>
+        else if (d.role === 'warning') {
+            return  <OutputLump warning key={i}>{d.content}</OutputLump>
         }
         else {
-            return <OutputLump key={i.content}>{i.content}</OutputLump>
+            return <OutputLump key={i}>{d.content}</OutputLump>
         }
     })}
 </>

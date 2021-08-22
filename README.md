@@ -15,3 +15,14 @@
 ```
 As it says on the can.
 Check [it](http://magdapoppins.github.io/portfolio).
+
+## Notes to self
+- yarn start to start
+- yarn deploy to deploy to gh-pages
+
+## Thanks to
+- [react-router]()
+- [emotion]()
+- [react-markdown]()
+- [github-pages]()
+Et al for making my life easier!

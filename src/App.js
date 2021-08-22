@@ -12,7 +12,7 @@ const App = () => {
   return(
   <Router>
     <div style={{margin: '.2em 25em 5em 25em'}}>
-      <nav style={{display: 'flex', justifyContent: 'space-between'}}>
+      <nav style={{display: 'flex', justifyContent: 'space-between', visibility: 'hidden'}}>
         <Link to="/">Home</Link>
         <Link to="/notes">Notes</Link>
         <Link to="/safety">Just the CV</Link>
@@ -20,9 +20,6 @@ const App = () => {
       <Switch>
         <Route path="/safety">
           <Safety />
-        </Route>
-        <Route path="/notes">
-          <p>Notes will be arriving shortly...</p>
         </Route>
         <Route path="/">
           <CLI />
