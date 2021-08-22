@@ -1,4 +1,4 @@
-# Portfolio
+# Magdas notes
 ```
                  ________________
                 |                |_____    __
@@ -14,7 +14,7 @@
     """`     """`
 ```
 As it says on the can.
-Check [it](http://magdapoppins.github.io/portfolio).
+Check [it](http://magdapoppins.github.io/portfolio) out!
 
 ## Notes to self
 - yarn start to start
