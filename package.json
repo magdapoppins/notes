@@ -1,8 +1,8 @@
 {
-  "name": "portfolio",
+  "name": "notes",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://magdapoppins.github.io/portfolio",
+  "homepage": "http://magdapoppins.github.io/notes",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
