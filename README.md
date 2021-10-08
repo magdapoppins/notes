@@ -1,5 +1,5 @@
 # Magdas collection of notes
-Just my personal jumble of notes in a cute command line form. Check [it](http://magdapoppins.github.io/portfolio) out!
+Just my personal jumble of notes in a cute command line form.
 
 ## How to dev
 - `yarn start` to start

@@ -1,9 +1,8 @@
-# How JS is executed in the browser
-TLDR; go play with the [loupe visualization](http://latentflip.com/loupe/) by Philip Roberts.
+# JS in the browser
 
-## Some key points you might have heard
+## Shortly about JS
 - JS is executed in the browser by the V8 chrome runtime
-- It is a single treaded language - only one thing can happen in one call stack at a time
+- It is a single threaded language - only one thing can happen in one call stack at a time
 - It is non-blocking - implemented by callbacks
 - It is concurrent - enabled by WebAPIs
 - It is asynchronous
