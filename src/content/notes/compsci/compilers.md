@@ -1,4 +1,5 @@
 # Compilation and interpretation
+
 Notes from [Programming language pragmatics](https://www.goodreads.com/book/show/89197.Programming_Language_Pragmatics).
 
 - A compiler is something that reads the entirity of the code, understanding its meaning and outputs the contents in a different format (assembly language or another high-level language).
@@ -19,11 +20,6 @@ Notes from [Programming language pragmatics](https://www.goodreads.com/book/show
 5. Target code generation
 6. Machine-specific code improvement => compiled code
 
-
 ## Interpreter steps
 
 4. Tree-walk routines => program output
-
-
-
-

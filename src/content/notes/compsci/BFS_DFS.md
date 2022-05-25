@@ -1,17 +1,19 @@
 # Graph and tree traversal
 
 ## BFS
+
 - Like a ripple in water, walk the closest nodes first, then move to the next "layer"
 - Implementation using a queue
 
 ## DFS
+
 - Like a maze, move though one complete path before backing up and moving to the next
 - Implementation using iteration or recursion
 
 ## Comparison
-- BFS always finds the shortest path 
-- DFS generally consumes less memory
 
+- BFS always finds the shortest path
+- DFS generally consumes less memory
 
 ```python
 class TreeNode(object):
@@ -50,7 +52,7 @@ def BFS(root):
 			nodes_to_check.append(current.left)
 		if current.right:
 			nodes_to_check.append(current.right)
-			
+
 
 def DFS(root):
 	def walk_down(node):
