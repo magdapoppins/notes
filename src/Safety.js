@@ -1,7 +1,6 @@
-import React from "react"
+import React from "react";
 import { GlowASCII } from "./ASCII";
 import { OutputLump } from "./Output";
-
 
 const keyboard = `
 THIS IS
@@ -18,9 +17,9 @@ __________________________________________________
 |          [_][______________][_]                  |
 |__________________________________________________|
 
-`
+`;
 
-const hello = `Hi there 👋🏼 I'm Magda. I work as a software engineer at Valohai.`
+const hello = `Hi there 👋🏼 I'm Magda. I work as a software engineer at Valohai.`;
 
 const cv = `
 Work:
@@ -34,13 +33,13 @@ Education:
 2012-2014 Artisan of Textile (Omnia)
 2014-2019 BA, MA Educational Science (University of Turku)
 2017 C# Bootcamp (Acedemy by Academic Work)
-`
+`;
 
 const hobbies = `
 During my free time I like to be outside and work on my garden. Relaxing
 is super important to me (I feel it really feeds creativity) so I also
 practice yoga and meditation.
-`
+`;
 
 const tech = `
 Tech Spec 0-5:
@@ -53,7 +52,7 @@ Docker     ♥ ♥ ♥
 K8s        ♥ ♥
 Postgres   ♥ ♥ ♥
 
-`
+`;
 
 const Safety = () => (
   <>
@@ -63,6 +62,6 @@ const Safety = () => (
     <OutputLump surprise>{hobbies}</OutputLump>
     <OutputLump>{tech}</OutputLump>
   </>
-)
+);
 
 export default Safety;

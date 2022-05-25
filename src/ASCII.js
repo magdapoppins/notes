@@ -1,10 +1,11 @@
-import styled from "styled-components"
-import { colors } from "./utils/colors"
+import styled from "styled-components";
+import { colors } from "./utils/colors";
 
 export const GlowASCII = styled.pre`
-color: ${colors.red};
-text-shadow: 1px 1px 2px ${colors.orange}, 0 0 25px ${colors.red}, 0 0 5px ${colors.yellow};
-`
+  color: ${colors.red};
+  text-shadow: 1px 1px 2px ${colors.orange}, 0 0 25px ${colors.red},
+    0 0 5px ${colors.yellow};
+`;
 
 export const ASCII = () => {
   const text = `
@@ -20,8 +21,6 @@ __  __   ___                      \\  ___ \`'.
               / /   | |_||     ||\\_______|/   / /   | |_
               \\ \\._,\\ '/\\'. __//              \\ \\._,\\ '/
                 \`--'  \`"  \`'---'                \`--'  \`"
-  `
-  return <GlowASCII>
-    {text}
-  </GlowASCII>
-}
+  `;
+  return <GlowASCII>{text}</GlowASCII>;
+};

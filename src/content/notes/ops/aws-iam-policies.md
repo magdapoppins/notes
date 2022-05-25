@@ -1,6 +1,7 @@
 ## Ready policy templates for AWS IAM
 
 Push access to repository
+
 ```
 {
     "Version": "2012-10-17",
@@ -31,6 +32,7 @@ Push access to repository
 ```
 
 Access to s3 bucket and items within
+
 ```
 {
     "Version": "2012-10-17",
