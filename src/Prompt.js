@@ -1,6 +1,7 @@
 import React from "react"
 import { useEvent } from "react-use"
 import styled, { keyframes } from "styled-components"
+import { getBasePrompt } from "./CLI";
 
 
 function blinkingEffect() {
@@ -34,7 +35,7 @@ const Prompt = ({getResponse, location}) => {
     }, [focusInput, getResponse])
 
     return <>
-        <pre style={{'display': 'inline-block', 'margin': 0, lineHeight: '1.2em'}}>/home/guest/{location} 🛼 </pre><input
+        <pre style={{'display': 'inline-block', 'margin': 0, lineHeight: '1.2em'}}>{getBasePrompt(location)}{' '}</pre><input
             ref={inputRef}
             type='text'
             value={value}

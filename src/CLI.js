@@ -11,6 +11,8 @@ const pages = require.context("!raw-loader!./content", true, /.md$/);
 
 const root = makeDirectory()
 
+export const getBasePrompt = (location) => `[~/guest/${location} 🛼]`;
+
 function makeDirectory() {
   return {
     'directories': {},
@@ -65,19 +67,24 @@ const CLI = () => {
   }, [log])
 
 
+  const actionOptions = ['pwd', 'cd', 'ls', 'cat', 'clear()', 'help']
+
   const getResponse = (e) => {
     if (e.key !== 'Enter' && e.key !== 'Tab') {
       return false;
     }
+    let input = e.target.value
     if (e.key === 'Tab') {
       e.preventDefault()
-      // Todo add autocompletion
+      const matchingOption = actionOptions.find(option => option.startsWith(input));
+      if (matchingOption) {
+        input = matchingOption;
+      }
     }
-    const input = e.target.value
     if (input === 'help') {
       const newLog = [
         ...log,
-        bakeToLogMessage(`/home/guest/${location} 🛼 help`),
+        bakeToLogMessage(`${getBasePrompt(location)} help`),
       ]
       newLog.push(bakeToLogMessage('Try listing contents (ls), moving into folders (cd directoryname) and copying texts (cat filename).', "info"))
       setLog(newLog)
@@ -93,7 +100,7 @@ const CLI = () => {
       const outputFiles = Object.keys(dir.files)
       const newLog = [
         ...log, 
-        bakeToLogMessage(`/home/guest/${location} 🛼 ls`),
+        bakeToLogMessage(`${getBasePrompt(location)} ls`),
         bakeToLogMessage([...outputFiles, ...outputDirs].join(' '))
       ]
       setLog(newLog)
@@ -108,7 +115,7 @@ const CLI = () => {
         setLocation(locations.join('/'))
         setLog([
           ...log, 
-          bakeToLogMessage(`/home/guest/${location} 🛼 ${input}`),
+          bakeToLogMessage(`${getBasePrompt(location)} ${input}`),
         ])
       }
       else {
@@ -124,7 +131,7 @@ const CLI = () => {
     if (input === 'pwd') {
       setLog([
         ...log, 
-        bakeToLogMessage(`Users/magda/home/guest/${location} 🛼`),
+        bakeToLogMessage(`Users/magda/home/guest/${location}`),
       ])
     }
 
@@ -136,7 +143,7 @@ const CLI = () => {
       if (dir.files[filename]) {
         setLog([
           ...log,
-          bakeToLogMessage(`Users/magda/home/guest/${location} 🛼 cat ${filename}`),
+          bakeToLogMessage(`${getBasePrompt(location)} cat ${filename}`),
           bakeToLogMessage(dir.files[filename]),
         ])
       }
